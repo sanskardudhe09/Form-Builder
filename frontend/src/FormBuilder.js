@@ -38,7 +38,7 @@ const FormBuilder = () => {
     };
 
     // Save form to the backend
-    const response = await fetch(`https://form-builder-5bg4.vercel.app/api/forms`, {
+    const response = await fetch(`https://form-builder-5bg4.vercel.app/api/forms/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
