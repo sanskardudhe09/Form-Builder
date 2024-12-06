@@ -18,10 +18,10 @@ mongoose
   .catch((err) => console.log(err));
 
 // Routes
-app.use('/api/forms', formRoutes);
+app.use('https://form-builder-5bg4.vercel.app/api/forms', formRoutes);
 
 // Start server
 const port = 5000;
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
