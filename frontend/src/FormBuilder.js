@@ -38,7 +38,7 @@ const FormBuilder = () => {
     };
 
     // Save form to the backend
-    const response = await fetch('/api/forms/', {
+    const response = await fetch(`/api/forms/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
