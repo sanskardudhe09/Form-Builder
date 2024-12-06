@@ -8,7 +8,14 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: 'https://form-builder-nine-omega.vercel.app/',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  credentials: true, // Allow cookies or authentication headers
+};
+app.use(cors(corsOptions));
+
 
 // MongoDB connection
 const mongoURI = process.env.MONGO_URI; // Replace with your MongoDB URI
