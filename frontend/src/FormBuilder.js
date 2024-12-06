@@ -38,7 +38,7 @@ const FormBuilder = () => {
     };
 
     // Save form to the backend
-    const response = await fetch(`/`, {
+    const response = await fetch(`https://form-builder-5bg4.vercel.app/api/forms`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
@@ -46,7 +46,7 @@ const FormBuilder = () => {
 
     const data = await response.json();
     console.log(data);
-    if (data._id) navigate(`/${data._id}`);
+    if (data._id) navigate(`https://form-builder-5bg4.vercel.app/api/forms/${data._id}`);
   };
 
   const handleQuestionChange = async (id, field, value) => {

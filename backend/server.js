@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: 'https://form-builder-nine-omega.vercel.app/',
+  origin: 'https://form-builder-nine-omega.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
   credentials: true, // Allow cookies or authentication headers
 };
@@ -25,7 +25,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // Routes
-app.use('https://form-builder-5bg4.vercel.app/api/forms', formRoutes);
+app.use('/api/forms', formRoutes);
 
 // Start server
 const port = 5000;
