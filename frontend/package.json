@@ -1,5 +1,6 @@
 {
   "name": "frontend",
+  "proxy": "https://form-builder-5bg4.vercel.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
