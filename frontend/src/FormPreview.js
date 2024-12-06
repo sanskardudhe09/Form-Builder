@@ -9,7 +9,7 @@ const FormPreview = () => {
   useEffect(() => {
     // Fetch the form data from the backend
     const fetchForm = async () => {
-      const response = await fetch(`https://form-builder-5bg4.vercel.app/api/forms/${id}`);
+      const response = await fetch(`/${id}`);
       const data = await response.json();
       setForm(data);
     };
@@ -17,7 +17,7 @@ const FormPreview = () => {
   }, [id]);
 
   const handleSubmit = async () => {
-    await fetch(`https://form-builder-5bg4.vercel.app/api/forms/${id}/responses`, {
+    await fetch(`/${id}/responses`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ responses }),
