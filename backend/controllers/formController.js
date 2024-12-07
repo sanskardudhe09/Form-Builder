@@ -12,7 +12,7 @@ const createForm = async (req, res) => {
       headerImage,
       questions,
     });
-
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
     const savedForm = await newForm.save();
     res.status(201).json(savedForm);
   } catch (err) {

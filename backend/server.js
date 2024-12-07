@@ -10,7 +10,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-
+app.options('*', cors({
+  origin: 'https://form-builder-nine-omega.vercel.app',
+  credentials: true,
+}));
 // MongoDB connection
 const mongoURI = process.env.MONGO_URI; // Replace with your MongoDB URI
 mongoose
