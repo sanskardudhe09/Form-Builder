@@ -1,5 +1,5 @@
 const express = require('express');
-const { createForm, getFormById, submitResponse } = require('../controllers/formController');
+const { createForm, getFormById, submitResponse } = require('../controllers/formController.js');
 const router = express.Router();
 
 // Route to create a new form
